@@ -16,31 +16,10 @@ import javax.xml.bind.annotation.XmlType;
  *
  */
 @XmlAccessorType(XmlAccessType.FIELD)
-@XmlType(name = "list", propOrder = {
-    "objGroup"
-})
+@XmlType(name = "list")
 @XmlRootElement
 public class List extends Obj{
 
-    @XmlElements({
-        @XmlElement(name = "obj", type = Obj.class),
-        @XmlElement(name = "bool", type = Bool.class),
-        @XmlElement(name = "int", type = Int.class),
-        @XmlElement(name = "real", type = Real.class),
-        @XmlElement(name = "str", type = Str.class),
-        @XmlElement(name = "enum", type = Enum.class),
-        @XmlElement(name = "abstime", type = Abstime.class),
-        @XmlElement(name = "reltime", type = Reltime.class),
-        @XmlElement(name = "date", type = Date.class),
-        @XmlElement(name = "time", type = Time.class),
-        @XmlElement(name = "uri", type = Uri.class),
-        @XmlElement(name = "list", type = List.class),
-        @XmlElement(name = "ref", type = Ref.class),
-        @XmlElement(name = "err", type = Err.class),
-        @XmlElement(name = "op", type = Op.class),
-        @XmlElement(name = "feed", type = Feed.class)
-    })
-    protected java.util.List<Object> objGroup;
     @XmlAttribute(name = "of")
     protected String of;
     @XmlAttribute(name = "min")
@@ -62,8 +41,6 @@ public class List extends Obj{
     protected String unit;
     @XmlAttribute(name = "writable")
     protected Boolean writable;
-    @XmlAttribute(name = "name")
-    protected String name;
     @XmlAttribute(name = "href")
     protected String href;
     @XmlAttribute(name = "null")
@@ -107,12 +84,6 @@ public class List extends Obj{
      * 
      * 
      */
-    public java.util.List<Object> getObjGroup() {
-        if (objGroup == null) {
-            objGroup = new ArrayList<Object>();
-        }
-        return this.objGroup;
-    }
 
     /**
      * Obtient la valeur de la propriété of.

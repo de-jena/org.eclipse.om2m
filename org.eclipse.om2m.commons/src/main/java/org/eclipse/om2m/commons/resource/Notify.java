@@ -69,6 +69,7 @@ public class Notify {
 
     @XmlElement(namespace = "http://uri.etsi.org/m2m", required = true)
     protected StatusCode statusCode;
+    @XmlElement(required = true)
     protected Base64Binary representation;
     @XmlElement(required = true)
     @XmlSchemaType(name = "anyURI")
