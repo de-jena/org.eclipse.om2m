@@ -26,6 +26,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.codec.binary.Base64;
+import org.apache.commons.httpclient.Header;
 import org.apache.commons.httpclient.HttpClient;
 import org.apache.commons.httpclient.HttpMethod;
 import org.apache.commons.httpclient.methods.DeleteMethod;
@@ -113,7 +114,8 @@ public class RestHttpClient implements RestClientService {
                 }
             }
             if(statusCode==201){
-                if(httpMethod.getResponseHeader("Location").getValue()!=null){
+            	Header location = httpMethod.getResponseHeader("Location");
+                if((location != null) && (location.getValue()!=null)){
                     responseConfirm.setResourceURI(httpMethod.getResponseHeader("Location").getValue());
                 }
             }
