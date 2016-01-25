@@ -75,14 +75,19 @@ public class DiscoveryController extends Controller {
         ResponseConfirm errorResponse = new ResponseConfirm();
 
         // Check AccessRight
-        EntityManager em = DBAccess.createEntityManager();
-        em.getTransaction().begin();
-        SclBase sclBase = DAOFactory.getSclBaseDAO().find(Constants.SCL_ID, em);
-        em.close();
-        errorResponse = checkAccessRight(sclBase.getAccessRightID(), requestIndication.getRequestingEntity(), Constants.AR_DISCOVER);
-        if (errorResponse != null) {
-            return errorResponse;
-        }
+        // 2015-09-23 - Gregory BONNARDEL
+        // According to TS 102921 specification, right checking must be done
+        // on URIs returned as result of the discovery. 
+        
+        //EntityManager em = DBAccess.createEntityManager();
+        //em.getTransaction().begin();
+        //SclBase sclBase = DAOFactory.getSclBaseDAO().find(Constants.SCL_ID, em);
+        //em.close();
+        //errorResponse = checkAccessRight(sclBase.getAccessRightID(), requestIndication.getRequestingEntity(), Constants.AR_DISCOVER);
+        //if (errorResponse != null) {
+        //    return errorResponse;
+        //}
+	errorResponse = null;
 
         // Response
         // Initiate Parameters
@@ -113,7 +118,7 @@ public class DiscoveryController extends Controller {
             }
         }
         // Response
-        return new ResponseConfirm(StatusCode.STATUS_OK, discover(searchPrefix, maxSize, filterCriteriaType));
+        return new ResponseConfirm(StatusCode.STATUS_OK, discover(searchPrefix, maxSize, filterCriteriaType, requestIndication.getRequestingEntity()));
 
 
     }
@@ -153,9 +158,10 @@ public class DiscoveryController extends Controller {
      * @param searchPrefix
      * @param maxSize
      * @param filterCriteriaType
+     * @param requestEntity
      * @return discovery object
      */
-    public static Discovery discover (String searchPrefix, int maxSize, FilterCriteriaType filterCriteriaType) {
+    public Discovery discover (String searchPrefix, int maxSize, FilterCriteriaType filterCriteriaType, String requestEntity) {
         Discovery discovery = new Discovery();
         long begResourcesDAO = System.currentTimeMillis();
         // Retrieve all resources
@@ -181,27 +187,42 @@ public class DiscoveryController extends Controller {
                     }
                     // Compare resource searchString with ifMatch
                     if (resources.get(i).getSearchStrings().getSearchString().containsAll(filterCriteriaType.getIfMatch())) {
-                        //infinity maxSize OR not yet reached
-                        if (maxSize < 0 || discovery.getDiscoveryURI().getReference().size() < maxSize) {
-                            // Add the resource URI to the discovered references list
-                            discovery.getDiscoveryURI().getReference().add(resources.get(i).getUri());
-                        }else {
-                            // Break if the maxSize is reached
-                            discovery.setTruncated(true);
-                            break;
+                        // check if the current request entity is allowed to discover the node
+                        ResponseConfirm rc = checkAccessRight(resources.get(i).getAccessRightID(), requestEntity,Constants.AR_DISCOVER);
+
+                        if (rc == null) {
+                            // the current request entity is allowed to discover the node 
+
+                            //infinity maxSize OR not yet reached
+                            if (maxSize < 0 || discovery.getDiscoveryURI().getReference().size() < maxSize) {
+                                // Add the resource URI to the discovered references list
+                                discovery.getDiscoveryURI().getReference().add(resources.get(i).getUri());
+                            } else {
+                                // Break if the maxSize is reached
+                                discovery.setTruncated(true);
+                                break;
+                            }
                         }
                     }
                 }
             }else {
                 // Empty FilterCriteria
-                // infinity maxSize OR not yet reached
-                if (maxSize<0 || discovery.getDiscoveryURI().getReference().size() < maxSize) {
-                    // Add the resource URI to the discovered references list
-                    discovery.getDiscoveryURI().getReference().add(resources.get(i).getUri());
-                }else{
-                    // Break if the maxSize is reached
-                    discovery.setTruncated(true);
-                    break;
+
+                // check if the current request entity is allowed to discover the node
+                ResponseConfirm rc = checkAccessRight(resources.get(i).getAccessRightID(), requestEntity, Constants.AR_DISCOVER);
+
+                if (rc == null) {
+                    // the current request entity is allowed to discover the node 
+
+                    // infinity maxSize OR not yet reached
+                    if (maxSize<0 || discovery.getDiscoveryURI().getReference().size() < maxSize) {
+                        // Add the resource URI to the discovered references list
+                        discovery.getDiscoveryURI().getReference().add(resources.get(i).getUri());
+                    }else{
+                        // Break if the maxSize is reached
+                        discovery.setTruncated(true);
+                        break;
+                    }
                 }
             }
         }
