@@ -71,6 +71,7 @@ public class DBAccess {
 	 * @return Entity Manager 
 	 */
 	public static EntityManager createEntityManager(){
+		Thread.currentThread().setContextClassLoader(DBAccess.class.getClassLoader());
 		return getInstance().emf.createEntityManager();
 	}
 

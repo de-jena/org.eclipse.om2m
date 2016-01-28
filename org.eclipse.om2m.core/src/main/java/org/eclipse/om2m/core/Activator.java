@@ -24,6 +24,8 @@ package org.eclipse.om2m.core;
 import java.util.Date;
 
 import javax.persistence.EntityManager;
+import javax.xml.datatype.DatatypeConfigurationException;
+import javax.xml.datatype.DatatypeFactory;
 
 import org.eclipse.om2m.commons.obix.io.ObixMapper;
 import org.apache.commons.logging.Log;
@@ -56,6 +58,7 @@ import org.eclipse.om2m.core.dao.DBAccess;
 import org.eclipse.om2m.core.router.Router;
 import org.eclipse.om2m.core.service.SclService;
 import org.eclipse.om2m.ipu.service.IpuService;
+import org.eclipse.persistence.internal.helper.ClassConstants;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -80,6 +83,8 @@ public class Activator implements BundleActivator {
     private ServiceTracker<Object, Object> restClientServiceTracker;
 
     public void start(BundleContext bundleContext) throws Exception {
+    	Thread.currentThread().setContextClassLoader(this.getClass().getClassLoader());
+    	
         // Initiate Scl
         LOGGER.info("Starting SCL..");
         try {
