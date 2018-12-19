@@ -329,6 +329,9 @@ public class Notifier {
 		DBTransaction dbTransaction = dbs.getDbTransaction();
 		dbTransaction.open();
 		SubscriptionEntity subscriptionEntityToBeDeleted = dbs.getDAOFactory().getSubsciptionDAO().find(dbTransaction, resourceId);
+		// delete the resource in UriMapper table
+		UriMapper.deleteUri(subscriptionEntityToBeDeleted.getHierarchicalURI());
+		// delete the resource
 		dbs.getDAOFactory().getSubsciptionDAO().delete(dbTransaction, subscriptionEntityToBeDeleted);
 		dbTransaction.commit();
 		dbTransaction.close();
