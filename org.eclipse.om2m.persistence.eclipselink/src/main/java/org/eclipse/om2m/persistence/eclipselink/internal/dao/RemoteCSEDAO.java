@@ -19,6 +19,7 @@
  *******************************************************************************/
 package org.eclipse.om2m.persistence.eclipselink.internal.dao;
 
+import org.eclipse.om2m.commons.entities.CSEBaseEntity;
 import org.eclipse.om2m.commons.entities.RemoteCSEEntity;
 import org.eclipse.om2m.persistence.eclipselink.internal.DBTransactionJPAImpl;
 import org.eclipse.om2m.persistence.service.DBTransaction;
@@ -40,7 +41,7 @@ public class RemoteCSEDAO extends AbstractDAO<RemoteCSEEntity> {
 		}
 		
 		transaction.getEm().remove(resource);
-//		transaction.getEm().getEntityManagerFactory().getCache().evict(CSEBaseEntity.class);
+		transaction.getEm().getEntityManagerFactory().getCache().evict(CSEBaseEntity.class);
 	}
 	
 	@Override
