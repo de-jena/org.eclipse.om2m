@@ -62,18 +62,18 @@
 							<tasks>
 								<echo>Copying scripts into in product</echo>
 								<copy file="${basedir}/script"
-									tofile="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/start.sh" />
+									tofile="${basedir}/target/products/in-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/start.sh" />
 								<copy file="${basedir}/script"
-									tofile="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/start.bat" />
+									tofile="${basedir}/target/products/in-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/start.bat" />
 								<copy file="${basedir}/log4j.configuration"
-									tofile="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/log4j.configuration" />
+									tofile="${basedir}/target/products/in-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/log4j.configuration" />
 									
 								<copy
-									todir="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/configurations">
+									todir="${basedir}/target/products/in-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/configurations">
 									<fileset dir="${basedir}/configurations" includes="**/*" />
 								</copy>
 								<propertyfile
-									file="${basedir}/target/products/in-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/configuration/config.ini">
+									file="${basedir}/target/products/in-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/configuration/config.ini">
 									<entry key="osgi.bundles" type="string" operation="+"
 										value=", reference:file:pax-confman-propsloader-0.2.2.jar@1:start" />
 								</propertyfile>

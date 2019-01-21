@@ -57,9 +57,9 @@
 						<configuration>
 							<tasks>
 								<echo>Copying scripts into asn product</echo>
-								<copy file="${basedir}/script" tofile="${basedir}/target/products/asn-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/start.sh"/>
-								<copy file="${basedir}/script" tofile="${basedir}/target/products/asn-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/start.bat"/>
-								<copy file="${basedir}/log4j.configuration" tofile="${basedir}/target/products/asn-cse/${osgi.os}/${osgi.ws}/${osgi.arch}/log4j.configuration"/>
+								<copy file="${basedir}/script" tofile="${basedir}/target/products/asn-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/start.sh"/>
+								<copy file="${basedir}/script" tofile="${basedir}/target/products/asn-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/start.bat"/>
+								<copy file="${basedir}/log4j.configuration" tofile="${basedir}/target/products/asn-cse/${tycho.env.osgi.os}/${tycho.env.osgi.ws}/${tycho.env.osgi.arch}/log4j.configuration"/>
 							</tasks>
 						</configuration>
 					</execution>
