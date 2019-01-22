@@ -81,12 +81,12 @@
 		<!-- Access Control resources -->
 		<java-type name="AccessControlPolicy">
 		</java-type>
-		<java-type name="AccessControlRule">
-			<java-attributes>
-				<xml-element java-attribute="accessControlOriginators"
-					name="acor" />
-			</java-attributes>
-		</java-type>
+		<!-- <java-type name="AccessControlRule"> -->
+		<!-- <java-attributes> -->
+		<!-- <xml-element java-attribute="accessControlOriginators" -->
+		<!-- name="acor" /> -->
+		<!-- </java-attributes> -->
+		<!-- </java-type> -->
 
 		<!-- Common resources -->
 		<java-type name="AE">
