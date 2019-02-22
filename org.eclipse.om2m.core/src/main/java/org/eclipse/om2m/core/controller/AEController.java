@@ -82,7 +82,7 @@ public class AEController extends Controller {
 		 * ae-ID					NP
 		 * pointOfAccess			O
 		 * ontologyRef				O
-		 * nodeLink					NP
+		 * nodeLink					NP -> O in new release
 		 */
 
 		ResponsePrimitive response = new ResponsePrimitive(request);
@@ -188,7 +188,7 @@ public class AEController extends Controller {
 		if (ae.getAEID() != null){
 			throw new NotPermittedAttrException("ae-id is Not Permitted");
 		}
-		// nodeLink					NP
+		// nodeLink					NP -> O
 		if (ae.getNodeLink() != null){
 			aeEntity.setNodeLink(ae.getNodeLink());
 		}
@@ -400,7 +400,7 @@ public class AEController extends Controller {
 		 * ae-ID					NP
 		 * pointOfAccess			O
 		 * ontologyRef				O
-		 * nodeLink					NP
+		 * nodeLink					NP -> O
 		 * requestReachability		O
 		 */
 		ResponsePrimitive response = new ResponsePrimitive(request);
@@ -459,9 +459,9 @@ public class AEController extends Controller {
 		if(ae.getAEID() != null){
 			throw new BadRequestException("AE ID is NP");
 		}
-		// nodeLink					NP
+		// nodeLink					NP -> O
 		if(ae.getNodeLink() != null){
-			throw new BadRequestException("NodeLink is NP");
+			aeEntity.setNodeLink(ae.getNodeLink());
 		}
 
 		AE modifiedAttributes = new AE();
