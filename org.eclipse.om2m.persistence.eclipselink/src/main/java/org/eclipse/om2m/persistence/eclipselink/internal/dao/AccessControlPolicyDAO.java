@@ -69,6 +69,19 @@ public class AccessControlPolicyDAO extends AbstractDAO<AccessControlPolicyEntit
 		DBTransactionJPAImpl transaction = (DBTransactionJPAImpl) dbTransaction;
 		List<LabelEntity> lbls = processLabels(dbTransaction, resource.getLabelsEntities());
 		resource.setLabelsEntities(lbls);
+		
+		// persist self privilege
+		for(AccessControlRuleEntity acre : resource.getSelfPrivileges()) {
+			acre.setSelfAccessControlPolicy(resource);
+			transaction.getEm().persist(acre);
+		}
+		
+		// persist privileges
+		for(AccessControlRuleEntity acre : resource.getPrivileges()) {
+			acre.setAccessControlPolicy(resource);
+			transaction.getEm().persist(acre);
+		}
+		
 		transaction.getEm().merge(resource);
 	}
 

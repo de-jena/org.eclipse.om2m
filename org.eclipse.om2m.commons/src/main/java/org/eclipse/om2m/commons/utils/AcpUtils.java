@@ -107,9 +107,11 @@ public class AcpUtils {
 
 			// For each originator in ACR
 			for (String originator : rule.getAccessControlOriginators()){
-				AccessControlOriginatorEntity originatorEntity = new AccessControlOriginatorEntity(originator);
-				ruleEntity.getAccessControlOriginators().add(originatorEntity);
-			}
+				for (String splitted: originator.split(" ")) {
+					AccessControlOriginatorEntity originatorEntity = new AccessControlOriginatorEntity(splitted);
+					ruleEntity.getAccessControlOriginators().add(originatorEntity);					
+				}
+			}	
 
 			result.add(ruleEntity);
 		}
