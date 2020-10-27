@@ -68,7 +68,7 @@ function get(targetId){
         beforeSend: function(){},
         dataType: "json",
         url: context + targetId + "?rcn=5&lvl=1",
-        headers : {"X-M2M-Origin" : make_base_auth(username, password), "Accept":"application/json"},
+        headers : {"X-M2M-Origin" : make_base_auth(username, password), "Accept":"application/json", "X-M2M-RI":"OM2M-webpage"},
         success: function(response){
             $("#login").hide();
             $("#main").show();
@@ -240,7 +240,7 @@ function execute(url){
   $.ajax({
     type: 'POST',
     url: context+url,
-    headers: {"X-M2M-Origin":make_base_auth(username,password)},
+    headers: {"X-M2M-Origin":make_base_auth(username,password), "X-M2M-RI":"OM2M-webpage"},
     beforeSend: function() {
     },
     timeout: 20000,
@@ -259,7 +259,7 @@ function retrieve(url){
   $.ajax({
     type: 'GET',
     url: context+url,
-    headers: {"X-M2M-Origin":make_base_auth(username,password)},
+    headers: {"X-M2M-Origin":make_base_auth(username,password), "X-M2M-RI":"OM2M-webpage"},
     beforeSend: function() {
     },
     timeout: 20000,
@@ -287,7 +287,7 @@ function retrieve(url){
       $.ajax({
         type: 'POST',
         url: context+'/'+url,
-        headers: {"X-M2M-Origin":make_base_auth(username,password)},
+        headers: {"X-M2M-Origin":make_base_auth(username,password), "X-M2M-RI":"OM2M-webpage"},
         beforeSend: function() {
         },
         timeout: 20000,

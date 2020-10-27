@@ -65,7 +65,8 @@ function get(targetId) {
         url: context + targetId + "?rcn=5&lvl=1",
         headers: {
             "X-M2M-Origin": make_base_auth(username, password),
-            "Accept": "application/xml"
+            "Accept": "application/xml",
+            "X-M2M-RI": "OM2M-webpage-xml"
         },
         success: function(response) {
             $("#login").hide();
@@ -236,7 +237,8 @@ function execute(url) {
         type: 'POST',
         url: context + url,
         headers: {
-            "X-M2M-Origin": make_base_auth(username, password)
+            "X-M2M-Origin": make_base_auth(username, password),
+            "X-M2M-RI": "OM2M-webpage-xml"
         },
         beforeSend: function() {},
         timeout: 20000,
@@ -270,7 +272,8 @@ function retrieve(url) {
         type: 'GET',
         url: context + url,
         headers: {
-            "X-M2M-Origin": make_base_auth(username, password)
+            "X-M2M-Origin": make_base_auth(username, password),
+            "X-M2M-RI": "OM2M-webpage-xml"
         },
         beforeSend: function() {},
         timeout: 20000,
@@ -306,7 +309,8 @@ function create(url, content) {
         type: 'POST',
         url: context + '/' + url,
         headers: {
-            "X-M2M-Origin": make_base_auth(username, password)
+            "X-M2M-Origin": make_base_auth(username, password),
+            "X-M2M-RI": "OM2M-webpage-xml"
         },
         beforeSend: function() {},
         timeout: 20000,
