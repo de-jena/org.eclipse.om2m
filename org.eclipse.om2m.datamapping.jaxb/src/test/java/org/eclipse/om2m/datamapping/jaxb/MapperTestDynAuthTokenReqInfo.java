@@ -1,7 +1,5 @@
 package org.eclipse.om2m.datamapping.jaxb;
 
-import static org.junit.Assert.*;
-
 import java.math.BigInteger;
 
 import org.eclipse.om2m.commons.constants.MimeMediaType;

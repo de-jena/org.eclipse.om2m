@@ -27,7 +27,7 @@
 
 	<name>org.eclipse.om2m.hue :: API</name>
 	<description>Orange Base-Driver for Philips Hue Devices (API)</description>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 
 	<!-- =============================================================== -->
 

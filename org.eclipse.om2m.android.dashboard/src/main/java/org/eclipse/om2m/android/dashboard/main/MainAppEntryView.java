@@ -17,8 +17,7 @@ import java.io.InputStream;
 import org.eclipse.om2m.android.dashboard.applications.ApplicationConfigActivity;
 import org.eclipse.om2m.android.dashboard.cse.models.OneM2MApplication;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.Context;
 import android.content.Intent;
 import android.graphics.Bitmap;

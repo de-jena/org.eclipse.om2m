@@ -14,8 +14,7 @@ package org.eclipse.om2m.android.dashboard.devices;
 
 import org.eclipse.om2m.android.dashboard.cse.models.SDTDevice;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;

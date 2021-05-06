@@ -30,6 +30,7 @@ import org.eclipse.om2m.android.dashboard.tools.SettingsManager;
 import org.eclipse.om2m.android.dashboard.tools.Sorter;
 import org.eclipse.om2m.android.dashboard.utils.OTBUtils;
 
+import android.R;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;

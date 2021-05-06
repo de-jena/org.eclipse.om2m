@@ -20,7 +20,6 @@
 package org.eclipse.om2m.core.announcer;
 
 import java.math.BigInteger;
-import java.util.List;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -34,7 +33,6 @@ import org.eclipse.om2m.commons.constants.ShortName;
 import org.eclipse.om2m.commons.entities.AnnounceableSubordinateEntity;
 import org.eclipse.om2m.commons.entities.CreatedAnnouncedResourceEntity;
 import org.eclipse.om2m.commons.entities.RemoteCSEEntity;
-import org.eclipse.om2m.commons.entities.ResourceEntity;
 import org.eclipse.om2m.commons.exceptions.NotImplementedException;
 import org.eclipse.om2m.commons.resource.AE;
 import org.eclipse.om2m.commons.resource.AEAnnc;

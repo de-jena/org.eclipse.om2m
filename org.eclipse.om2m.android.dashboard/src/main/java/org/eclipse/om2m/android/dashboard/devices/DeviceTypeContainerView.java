@@ -20,8 +20,7 @@ import org.eclipse.om2m.android.dashboard.cse.models.SDTDevice;
 import org.eclipse.om2m.android.dashboard.tools.OneM2MDeviceType;
 import org.eclipse.om2m.android.dashboard.tools.Sorter;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.Context;
 import android.util.AttributeSet;
 import android.view.LayoutInflater;

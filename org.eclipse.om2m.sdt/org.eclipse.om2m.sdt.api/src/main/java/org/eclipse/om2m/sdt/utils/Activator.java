@@ -21,12 +21,15 @@ import org.eclipse.om2m.sdt.Domain;
 import org.eclipse.om2m.sdt.Module;
 import org.eclipse.om2m.sdt.events.SDTEventListener;
 import org.eclipse.om2m.sdt.rights.RightsManager;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.log.LogService;
 import org.osgi.util.tracker.ServiceTracker;
 
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 	
 	static private final String STAR = "*";

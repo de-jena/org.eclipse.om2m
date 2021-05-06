@@ -24,11 +24,16 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.eclipse.om2m.binding.service.RestClientService;
 import org.eclipse.om2m.core.service.CseService;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTracker;
 
+
+
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator  implements BundleActivator{
 	
 	   /** Logger */
@@ -37,7 +42,7 @@ public class Activator  implements BundleActivator{
 	   private ServiceTracker<Object, Object> cseServiceTracker;	    
 	   /**the coap server*/
 	   CoapServer server;
-
+       @Override
 	   public void start(BundleContext bundleContext) throws Exception {
 	    	
 	    	// Register the Rest CoAP Client 

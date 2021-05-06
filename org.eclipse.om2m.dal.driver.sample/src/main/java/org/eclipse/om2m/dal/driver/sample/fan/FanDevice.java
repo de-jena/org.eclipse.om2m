@@ -30,6 +30,11 @@ import javax.swing.JPanel;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
+import org.eclipse.om2m.dal.driver.sample.Activator;
+import org.eclipse.om2m.dal.driver.sample.fan.function.Countdown;
+import org.eclipse.om2m.dal.driver.sample.fan.function.FaultDetection;
+import org.eclipse.om2m.dal.driver.sample.fan.function.Speed;
+import org.eclipse.om2m.dal.driver.sample.fan.function.Switch;
 import org.osgi.framework.FrameworkUtil;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
@@ -41,11 +46,6 @@ import org.osgi.service.dal.functions.data.AlarmData;
 import org.osgi.service.event.Event;
 import org.osgi.service.event.EventConstants;
 import org.osgi.service.event.EventHandler;
-import org.eclipse.om2m.dal.driver.sample.Activator;
-import org.eclipse.om2m.dal.driver.sample.fan.function.Countdown;
-import org.eclipse.om2m.dal.driver.sample.fan.function.FaultDetection;
-import org.eclipse.om2m.dal.driver.sample.fan.function.Speed;
-import org.eclipse.om2m.dal.driver.sample.fan.function.Switch;
 
 /**
  * Fan device (UI interface and control logic)

@@ -1,8 +1,6 @@
 package org.eclipse.om2m.commons.utils;
 
 import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.function.Consumer;
 
 import org.eclipse.om2m.commons.resource.CustomAttribute;
 

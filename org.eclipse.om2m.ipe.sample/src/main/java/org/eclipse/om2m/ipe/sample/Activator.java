@@ -25,13 +25,17 @@ import org.eclipse.om2m.core.service.CseService;
 import org.eclipse.om2m.interworking.service.InterworkingService;
 import org.eclipse.om2m.ipe.sample.controller.LifeCycleManager;
 import org.eclipse.om2m.ipe.sample.controller.SampleController;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTracker;
 /**
  *  Manages the starting and stopping of the bundle.
  */
+
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
     /** Logger */
     private static Log logger = LogFactory.getLog(Activator.class);

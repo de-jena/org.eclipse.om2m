@@ -17,8 +17,7 @@ import java.util.List;
 
 import org.eclipse.om2m.sdt.home.types.DeviceType;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.res.Resources;
 import android.content.res.TypedArray;
 

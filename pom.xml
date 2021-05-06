@@ -56,100 +56,93 @@
 		</snapshotRepository>
 	</distributionManagement>
 
-	<repositories>
-		<repository>
-			<id>luna</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/releases/luna</url>
-		</repository>
-		<repository>
-			<id>orbit</id>
-			<layout>p2</layout>
-			<url>http://download.eclipse.org/tools/orbit/downloads/drops/R20160520211859/repository</url>
-		</repository>
-	</repositories>
-
 	<build>
 		<plugins>
 			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-maven-plugin</artifactId>
-				<version>${tycho.version}</version>
-				<extensions>true</extensions>
+				<groupId>biz.aQute.bnd</groupId>
+				<artifactId>bnd-maven-plugin</artifactId>
+				<configuration>
+				<bnd><![CDATA[
+					-noextraheaders: true
+			        ]]></bnd>
+			    </configuration>
+				<executions>
+					<execution>
+						<goals>
+							<goal>bnd-process</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>target-platform-configuration</artifactId>
-				<version>${tycho.version}</version>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
 				<configuration>
-					<resolver>p2</resolver>
-					<pomDependencies>consider</pomDependencies>
-					<ignoreTychoRepositories>true</ignoreTychoRepositories>
-
-					<environments>
-					</environments>
-						
-<!-- 					<dependency-resolution> -->
-<!-- 						<extraRequirements> -->
-<!-- 							<requirement> -->
-<!-- 								<type>eclipse-feature</type> -->
-<!-- 								<id>org.eclipse.om2m.feature</id> -->
-<!-- 								<versionRange>0.8.0</versionRange> -->
-<!-- 							</requirement> -->
-<!-- 						</extraRequirements> -->
-<!-- 					</dependency-resolution> -->
+					<archive>
+						<manifestFile>${project.build.outputDirectory}/META-INF/MANIFEST.MF</manifestFile>
+					</archive>
 				</configuration>
 			</plugin>
-
-
-
-			<plugin>
-				<groupId>org.eclipse.tycho</groupId>
-				<artifactId>tycho-packaging-plugin</artifactId>
-				<version>${tycho.version}</version>
-				<configuration>
-					<format>yyyyMMdd-HHmm</format>
-
-					<archiveSite>true</archiveSite>
-					<environments>
-					</environments>
-				</configuration>
-			</plugin>
-			
-			<plugin>
-    		    <groupId>org.eclipse.tycho</groupId>
-     			   <artifactId>tycho-versions-plugin</artifactId>
-   			   </plugin>
-      
 		</plugins>
-
 		<pluginManagement>
-
 			<plugins>
-
-				<plugin>
-					<groupId>org.eclipse.tycho</groupId>
-					<artifactId>tycho-surefire-plugin</artifactId>
-					<version>${tycho.version}</version>
-				</plugin>
-
-
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-assembly-plugin</artifactId>
 					<version>2.3</version>
 				</plugin>
-				
-				  <plugin>
-			          <groupId>org.eclipse.tycho</groupId>
-			          <artifactId>tycho-versions-plugin</artifactId>
-			          <version>${tycho.version}</version>
-			        </plugin>
-        
+				<plugin>
+					<groupId>biz.aQute.bnd</groupId>
+					<artifactId>bnd-maven-plugin</artifactId>
+					<version>5.3.0</version>
+				</plugin>
 			</plugins>
 		</pluginManagement>
 	</build>
 
+<dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.framework</artifactId>
+			<version>1.8.0</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.util.tracker</artifactId>
+			<version>1.5.1</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
+</dependencyManagement>
+	<dependencies>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.framework</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.util.tracker</artifactId>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>commons-logging</groupId>
+			<artifactId>commons-logging</artifactId>
+		</dependency>
+		<dependency>
+    <groupId>biz.aQute.bnd</groupId>
+    <artifactId>biz.aQute.bnd.annotation</artifactId>
+    <version>5.3.0</version>
+    <scope>provided</scope>
+</dependency>
+	</dependencies>
 
 	<modules>
 		<module>org.eclipse.om2m.commons</module>

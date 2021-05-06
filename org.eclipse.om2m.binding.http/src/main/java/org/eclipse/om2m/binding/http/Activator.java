@@ -23,8 +23,10 @@ import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.eclipse.om2m.binding.service.RestClientService;
 import org.eclipse.om2m.core.service.CseService;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.service.http.HttpService;
 import org.osgi.util.tracker.ServiceTracker;
@@ -32,6 +34,7 @@ import org.osgi.util.tracker.ServiceTracker;
 /**
  *  Manages the starting and stopping of the bundle.
  */
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 	private static BundleContext context;
 	/** Logger */

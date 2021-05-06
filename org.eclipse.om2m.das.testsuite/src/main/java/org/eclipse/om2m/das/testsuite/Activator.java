@@ -31,10 +31,13 @@ import org.eclipse.om2m.das.testsuite.dacis.DynamicAuthorizationConsultationDaci
 import org.eclipse.om2m.das.testsuite.dacis.FlexContainerAnncDacisTest;
 import org.eclipse.om2m.das.testsuite.dacis.FlexContainerDacisTest;
 import org.eclipse.om2m.das.testsuite.dacis.RemoteCseDacisTest;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 
 	private static BundleContext context;

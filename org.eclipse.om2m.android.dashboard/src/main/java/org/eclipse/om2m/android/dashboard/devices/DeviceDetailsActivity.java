@@ -17,16 +17,15 @@ import java.util.Map;
 
 import org.eclipse.om2m.android.dashboard.CustomSecondaryActivity;
 import org.eclipse.om2m.android.dashboard.cse.OneM2MListener;
-import org.eclipse.om2m.android.dashboard.cse.OneM2MRequester;
 import org.eclipse.om2m.android.dashboard.cse.OneM2MRequest.OneM2MReqType;
+import org.eclipse.om2m.android.dashboard.cse.OneM2MRequester;
 import org.eclipse.om2m.android.dashboard.cse.models.SDTDevice;
 import org.eclipse.om2m.android.dashboard.cse.models.SDTModule;
 import org.eclipse.om2m.android.dashboard.cse.requests.OneM2MRequestParams;
 import org.eclipse.om2m.android.dashboard.tools.SettingsManager;
 import org.eclipse.om2m.android.dashboard.utils.OTBUtils;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.DialogInterface;
 import android.content.res.Configuration;
 import android.content.res.Resources;

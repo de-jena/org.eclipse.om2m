@@ -13,7 +13,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>org.eclipse.om2m.sdt.home.monitoring.authentication.service</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	<name>Authentication service for Home Monitoring</name>
 
 	<parent>

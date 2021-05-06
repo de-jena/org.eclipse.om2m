@@ -7,13 +7,8 @@
  *******************************************************************************/
 package org.eclipse.om2m.datamapping.jaxb;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertTrue;
 
-import java.io.BufferedReader;
-import java.io.File;
-import java.io.FileNotFoundException;
-import java.io.FileReader;
-import java.io.IOException;
 import java.math.BigInteger;
 
 import org.eclipse.om2m.commons.constants.MimeMediaType;

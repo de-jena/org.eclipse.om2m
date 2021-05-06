@@ -15,8 +15,7 @@ package org.eclipse.om2m.android.dashboard.tools;
 import java.util.HashMap;
 import java.util.Map;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.drawable.BitmapDrawable;

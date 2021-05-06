@@ -8,12 +8,9 @@
 package org.eclipse.om2m.sdt.home.mocked.devices;
 
 import java.util.Arrays;
-import java.util.HashMap;
 import java.util.List;
-import java.util.Map;
 
 import org.eclipse.om2m.sdt.Domain;
-import org.eclipse.om2m.sdt.Module;
 import org.eclipse.om2m.sdt.datapoints.ArrayDataPoint;
 import org.eclipse.om2m.sdt.datapoints.StringDataPoint;
 import org.eclipse.om2m.sdt.exceptions.AccessException;

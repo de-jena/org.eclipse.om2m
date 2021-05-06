@@ -18,10 +18,25 @@
 	</parent>
 
 	<artifactId>org.eclipse.om2m.sdt.home</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	
 	<dependencies>
-	</dependencies>
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.commons</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>javax.xml.bind</groupId>
+		<artifactId>jaxb-api</artifactId>
+		<version>2.3.1</version>
+	</dependency>
+</dependencies>
 
 	<build>
 		<plugins>

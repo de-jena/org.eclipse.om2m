@@ -10,22 +10,19 @@
 
 package org.eclipse.om2m.client.java;
 
+import java.io.IOException;
+import java.io.InputStream;
+import java.io.OutputStream;
+import java.net.InetSocketAddress;
+import java.util.concurrent.Executors;
+
+import org.eclipse.om2m.client.java.tools.RestHttpClient;
 import org.json.JSONArray;
 import org.json.JSONObject;
 
 import com.sun.net.httpserver.HttpExchange;
 import com.sun.net.httpserver.HttpHandler;
-
-import java.io.IOException;
-import java.io.InputStream;
-import java.io.OutputStream;
-
-import org.eclipse.om2m.client.java.tools.RestHttpClient;
-import com.sun.net.httpserver.HttpExchange;
-import com.sun.net.httpserver.HttpHandler;
 import com.sun.net.httpserver.HttpServer;
-import java.net.InetSocketAddress;
-import java.util.concurrent.Executors;
 
 public class AELight2 extends TestConfig {
 	

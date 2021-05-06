@@ -9,8 +9,8 @@ package org.eclipse.om2m.ipe.sdt;
 
 import static org.junit.Assert.assertTrue;
 
+import org.eclipse.om2m.sdt.types.SimpleType;
 import org.junit.Test;
-import org.onem2m.sdt.types.SimpleType;
 
 public class SDTUtilTest {
 

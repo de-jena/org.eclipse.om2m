@@ -14,7 +14,7 @@
 	<modelVersion>4.0.0</modelVersion>
   
 	<artifactId>org.eclipse.om2m.ipe.sdt</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	<name>org.eclipse.om2m :: IPE SDT</name>
 	<description>org.eclipse.om2m :: IPE SDT</description>
 	
@@ -24,4 +24,57 @@
 		<version>1.1.0-SNAPSHOT</version>
 	</parent>
 
+<dependencies>
+
+	<dependency>
+		<groupId>junit</groupId>
+		<artifactId>junit</artifactId>
+		<version>4.8.1</version>
+		<scope>test</scope>
+	</dependency>
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.core.service</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.commons</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.osgi</groupId>
+		<artifactId>org.osgi.service.component</artifactId>
+		<version>1.4.0</version>
+	</dependency>
+
+	<dependency>
+		<groupId>org.osgi</groupId>
+		<artifactId>org.osgi.service.event</artifactId>
+		<version>1.4.0</version>
+		<scope>provided</scope>
+	</dependency>
+
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.flexcontainer.service</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+
+
+
+</dependencies>
 </project>

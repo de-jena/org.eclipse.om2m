@@ -27,5 +27,5 @@
   	<relativePath>..</relativePath>
   </parent>
   <name>org.eclipse.om2m :: data mapping service</name>
-  <packaging>eclipse-plugin</packaging>
+  <packaging>jar</packaging>
 </project>

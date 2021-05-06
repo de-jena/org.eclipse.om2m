@@ -20,16 +20,14 @@ import java.util.Map;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-
+import org.eclipse.om2m.dal.driver.custom.functions.BaseFunction;
+import org.eclipse.om2m.dal.driver.custom.functions.CustomTypes;
+import org.eclipse.om2m.dal.driver.sample.Activator;
 import org.osgi.service.dal.FunctionData;
 import org.osgi.service.dal.FunctionEvent;
 import org.osgi.service.dal.PropertyMetadata;
 import org.osgi.service.dal.functions.Alarm;
 import org.osgi.service.dal.functions.data.AlarmData;
-
-import org.eclipse.om2m.dal.driver.custom.functions.BaseFunction;
-import org.eclipse.om2m.dal.driver.custom.functions.CustomTypes;
-import org.eclipse.om2m.dal.driver.sample.Activator;
 
 /**
  * Fault detection function

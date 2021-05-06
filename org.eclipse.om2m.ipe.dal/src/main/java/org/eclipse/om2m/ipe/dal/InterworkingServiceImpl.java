@@ -23,11 +23,6 @@ import java.util.Hashtable;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.osgi.framework.InvalidSyntaxException;
-import org.osgi.framework.ServiceReference;
-import org.osgi.service.dal.Device;
-import org.osgi.service.dal.Function;
-import org.osgi.util.tracker.ServiceTracker;
 import org.eclipse.om2m.commons.constants.Constants;
 import org.eclipse.om2m.commons.constants.MimeMediaType;
 import org.eclipse.om2m.commons.constants.Operation;
@@ -45,6 +40,11 @@ import org.eclipse.om2m.commons.resource.Resource;
 import org.eclipse.om2m.commons.resource.ResponsePrimitive;
 import org.eclipse.om2m.interworking.service.InterworkingService;
 import org.eclipse.om2m.persistence.service.DBTransaction;
+import org.osgi.framework.InvalidSyntaxException;
+import org.osgi.framework.ServiceReference;
+import org.osgi.service.dal.Device;
+import org.osgi.service.dal.Function;
+import org.osgi.util.tracker.ServiceTracker;
 
 /**
  * Implementation of DAL interworking service.

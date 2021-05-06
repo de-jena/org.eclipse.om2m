@@ -28,6 +28,7 @@ import org.eclipse.om2m.sdt.home.lifx.impl.cloud.DiscoveryCloud;
 import org.eclipse.om2m.sdt.home.lifx.impl.lan.DiscoveryLan;
 import org.eclipse.om2m.sdt.home.lifx.impl.lan.Server;
 import org.eclipse.om2m.sdt.home.lifx.sdt.LIFXSDTDevice;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.Constants;
@@ -38,6 +39,7 @@ import org.osgi.service.cm.ManagedService;
 import org.osgi.service.log.LogService;
 
 @SuppressWarnings({"rawtypes", "unchecked"})
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator, ManagedService, LIFXDiscoveredDeviceListener {
 
 	private static final String MODE = "mode";

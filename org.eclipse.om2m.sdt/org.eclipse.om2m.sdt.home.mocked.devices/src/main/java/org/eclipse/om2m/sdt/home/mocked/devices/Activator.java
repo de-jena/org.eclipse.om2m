@@ -14,8 +14,10 @@ import org.eclipse.om2m.sdt.Domain;
 import org.eclipse.om2m.sdt.home.devices.GenericDevice;
 import org.eclipse.om2m.sdt.home.driver.Logger;
 import org.eclipse.om2m.sdt.home.driver.Utils;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.log.LogService;
 
@@ -27,6 +29,7 @@ interface MockedDevice {
 
 }
 
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 
 	static private final String PROTOCOL = "Mocked";

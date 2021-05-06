@@ -21,7 +21,7 @@
   
 	<artifactId>org.eclipse.om2m.das.testsuite</artifactId>
 	<description>DAS Test Suite</description>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
@@ -29,6 +29,16 @@
 			<artifactId>junit</artifactId>
 			<version>4.4</version>
 			<scope>test</scope>
+		</dependency>
+				<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.core.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.interworking.service</artifactId>
+			<version>${project.version}</version>
 		</dependency>
 	</dependencies>
 

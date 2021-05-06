@@ -37,6 +37,7 @@ import org.eclipse.om2m.datamapping.service.DataMapperService;
 import org.eclipse.om2m.flexcontainer.service.FlexContainerService;
 import org.eclipse.om2m.interworking.service.InterworkingService;
 import org.eclipse.om2m.persistence.service.DBService;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
@@ -46,6 +47,7 @@ import org.osgi.util.tracker.ServiceTracker;
 /**
  * Manages the starting and stopping of the bundle.
  */
+@Header(name = org.osgi.framework.Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 	private static BundleContext context;
 	/** Logger */

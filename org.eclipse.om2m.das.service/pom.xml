@@ -21,7 +21,7 @@
   
 	<artifactId>org.eclipse.om2m.das.service</artifactId>
 	<description>Dynamic Authorization Server service</description>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 
 	<dependencies>
 	</dependencies>

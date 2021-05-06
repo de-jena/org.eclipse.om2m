@@ -18,9 +18,29 @@
 	</parent>
 
 	<artifactId>org.eclipse.om2m.sdt.home.driver</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	
 	<dependencies>
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+			<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.cm</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+				<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.device</artifactId>
+			<version>1.1.0</version>
+		</dependency>
 	</dependencies>
 	
 	<build>

@@ -25,7 +25,6 @@ import java.util.List;
 import java.util.Map;
 
 import org.eclipse.om2m.commons.exceptions.BadRequestException;
-import org.eclipse.om2m.ipe.sample.model.Lamp;
 
 public class SampleModel {
 	

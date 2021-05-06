@@ -20,16 +20,16 @@ import java.util.Date;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.osgi.service.dal.Function;
-import org.osgi.service.dal.FunctionData;
-import org.osgi.service.event.Event;
-import org.osgi.service.event.EventHandler;
 import org.eclipse.om2m.commons.constants.MimeMediaType;
 import org.eclipse.om2m.commons.constants.ResourceType;
 import org.eclipse.om2m.commons.obix.Obj;
 import org.eclipse.om2m.commons.obix.Str;
 import org.eclipse.om2m.commons.obix.io.ObixEncoder;
 import org.eclipse.om2m.commons.resource.ContentInstance;
+import org.osgi.service.dal.Function;
+import org.osgi.service.dal.FunctionData;
+import org.osgi.service.event.Event;
+import org.osgi.service.event.EventHandler;
 
 /**
  * Device function event handler.

@@ -24,7 +24,6 @@ import org.eclipse.om2m.commons.resource.AccessControlPolicy;
 import org.eclipse.om2m.commons.resource.AccessControlRule;
 import org.eclipse.om2m.commons.resource.DynamicAuthorizationConsultation;
 import org.eclipse.om2m.commons.resource.FlexContainer;
-import org.eclipse.om2m.commons.resource.AbstractFlexContainerAnnc;
 import org.eclipse.om2m.commons.resource.RemoteCSE;
 import org.eclipse.om2m.commons.resource.RequestPrimitive;
 import org.eclipse.om2m.commons.resource.ResponsePrimitive;

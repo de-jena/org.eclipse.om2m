@@ -19,14 +19,14 @@ import java.util.Dictionary;
 import java.util.Enumeration;
 import java.util.Hashtable;
 
+import org.apache.commons.logging.Log;
+import org.apache.commons.logging.LogFactory;
+import org.eclipse.om2m.dal.driver.sample.Activator;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.service.dal.Function;
 import org.osgi.service.dal.OperationMetadata;
 import org.osgi.service.dal.PropertyMetadata;
-import org.apache.commons.logging.Log;
-import org.apache.commons.logging.LogFactory;
-import org.eclipse.om2m.dal.driver.sample.Activator;
 
 /**
  * Base function class, provide common properties and operations.

@@ -7,15 +7,18 @@
  *******************************************************************************/
 package org.eclipse.om2m.ipe.sdt.testsuite;
 
+
 import org.eclipse.om2m.commons.constants.Constants;
 import org.eclipse.om2m.core.service.CseService;
 import org.eclipse.om2m.ipe.sdt.testsuite.subscription.SubscriptionTestSuite;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
 import org.osgi.framework.ServiceReference;
 import org.osgi.util.tracker.ServiceTracker;
 import org.osgi.util.tracker.ServiceTrackerCustomizer;
 
+@Header(name = org.osgi.framework.Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 	
 	public static final String SDT_IPE_LOCATION = "/" + Constants.CSE_ID + "/" + Constants.CSE_NAME + "/SDT_IPE";

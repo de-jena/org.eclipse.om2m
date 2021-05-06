@@ -11,6 +11,7 @@
 package org.eclipse.om2m.client.java;
 import java.io.BufferedReader;
 import java.io.InputStreamReader;
+
 import org.eclipse.om2m.client.java.tools.RestHttpClient;
 import org.json.JSONObject;
 

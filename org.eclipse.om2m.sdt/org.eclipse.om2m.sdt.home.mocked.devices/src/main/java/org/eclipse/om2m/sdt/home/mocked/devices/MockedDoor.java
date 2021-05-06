@@ -10,7 +10,6 @@ package org.eclipse.om2m.sdt.home.mocked.devices;
 import java.util.List;
 
 import org.eclipse.om2m.sdt.Domain;
-import org.eclipse.om2m.sdt.datapoints.BooleanDataPoint;
 import org.eclipse.om2m.sdt.home.devices.Door;
 import org.eclipse.om2m.sdt.home.mocked.modules.MockedBattery;
 import org.eclipse.om2m.sdt.home.mocked.modules.MockedDoorStatus;

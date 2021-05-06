@@ -17,8 +17,7 @@ import org.eclipse.om2m.android.dashboard.devices.DeviceDetailsActivity;
 import org.eclipse.om2m.android.dashboard.tools.OneM2MDeviceType;
 import org.eclipse.om2m.android.dashboard.tools.SettingsManager;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.Context;
 import android.content.Intent;
 import android.util.AttributeSet;

@@ -19,7 +19,6 @@ import org.eclipse.om2m.commons.constants.ResourceType;
 import org.eclipse.om2m.commons.constants.ResponseStatusCode;
 import org.eclipse.om2m.commons.constants.ShortName;
 import org.eclipse.om2m.commons.entities.AccessControlPolicyEntity;
-import org.eclipse.om2m.commons.entities.AeAnncEntity;
 import org.eclipse.om2m.commons.entities.CSEBaseEntity;
 import org.eclipse.om2m.commons.entities.NodeAnncEntity;
 import org.eclipse.om2m.commons.entities.RemoteCSEEntity;

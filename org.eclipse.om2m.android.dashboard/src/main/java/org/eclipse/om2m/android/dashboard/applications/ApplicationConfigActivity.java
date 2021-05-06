@@ -15,14 +15,13 @@ package org.eclipse.om2m.android.dashboard.applications;
 import java.util.Locale;
 
 import org.eclipse.om2m.android.dashboard.cse.OneM2MListener;
-import org.eclipse.om2m.android.dashboard.cse.OneM2MRequester;
 import org.eclipse.om2m.android.dashboard.cse.OneM2MRequest.OneM2MReqType;
+import org.eclipse.om2m.android.dashboard.cse.OneM2MRequester;
 import org.eclipse.om2m.android.dashboard.cse.models.OneM2MApplication;
 import org.eclipse.om2m.android.dashboard.cse.requests.OneM2MRequestParams;
 import org.eclipse.om2m.android.dashboard.tools.SettingsManager;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.annotation.SuppressLint;
 import android.app.Activity;
 import android.content.res.Configuration;

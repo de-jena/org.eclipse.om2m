@@ -18,10 +18,25 @@
 	</parent>
 
 	<artifactId>org.eclipse.om2m.sdt.home.mocked.devices</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	
 	<dependencies>
+					<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+					<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home</artifactId>
+		<version>${project.version}</version>
+	</dependency>
 	
+						<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home.driver</artifactId>
+		<version>${project.version}</version>
+	</dependency>
 		
 	</dependencies>
 					

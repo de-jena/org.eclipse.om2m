@@ -14,7 +14,6 @@ import org.eclipse.om2m.commons.entities.AreaNwkDeviceInfoEntity;
 import org.eclipse.om2m.commons.entities.AreaNwkInfoEntity;
 import org.eclipse.om2m.commons.entities.DeviceInfoEntity;
 import org.eclipse.om2m.commons.entities.MgmtObjEntity;
-import org.eclipse.om2m.commons.entities.NodeEntity;
 import org.eclipse.om2m.persistence.eclipselink.internal.DBTransactionJPAImpl;
 import org.eclipse.om2m.persistence.service.DBTransaction;
 

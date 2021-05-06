@@ -8,9 +8,7 @@
 package org.eclipse.om2m.sdt.home.netatmo.impl;
 
 import java.io.FileInputStream;
-import java.util.Dictionary;
 import java.util.HashMap;
-import java.util.Hashtable;
 import java.util.Map;
 import java.util.Properties;
 

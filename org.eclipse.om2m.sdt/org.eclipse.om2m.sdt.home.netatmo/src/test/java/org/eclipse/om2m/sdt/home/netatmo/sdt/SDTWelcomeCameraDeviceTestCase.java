@@ -10,8 +10,6 @@ package org.eclipse.om2m.sdt.home.netatmo.sdt;
 import org.eclipse.om2m.sdt.Module;
 import org.eclipse.om2m.sdt.home.netatmo.impl.Activator;
 import org.eclipse.om2m.sdt.home.netatmo.model.WelcomeCamera;
-import org.jmock.Mock;
-import org.jmock.MockObjectTestCase;
 
 import junit.framework.TestCase;
 

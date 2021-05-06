@@ -12,8 +12,7 @@
  *******************************************************************************/
 package org.eclipse.om2m.android.dashboard.tools;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.TypedArray;

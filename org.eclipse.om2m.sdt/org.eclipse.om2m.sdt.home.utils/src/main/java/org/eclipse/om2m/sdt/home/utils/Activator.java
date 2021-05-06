@@ -12,13 +12,16 @@ import org.apache.commons.logging.LogFactory;
 import org.eclipse.om2m.core.service.CseService;
 import org.eclipse.om2m.sdt.home.utils.api.ISDTDiscovery;
 import org.eclipse.om2m.sdt.home.utils.api.ISDTDiscoveryFactory;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 import org.osgi.framework.ServiceReference;
 import org.osgi.framework.ServiceRegistration;
 import org.osgi.util.tracker.ServiceTracker;
 
 @SuppressWarnings({ "rawtypes", "unchecked" })
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
 
 	static private BundleContext context;

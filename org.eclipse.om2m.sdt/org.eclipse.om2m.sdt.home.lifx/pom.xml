@@ -24,7 +24,7 @@
 	<artifactId>org.eclipse.om2m.sdt.home.lifx</artifactId>
 
 
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	<name>${project.artifactId}</name>
 	<description>Orange OSGi LIFX Base Driver And SDT Refined Driver</description>
 
@@ -41,6 +41,28 @@
 			<scope>test</scope>
 		</dependency>
 
+						<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+					<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	
+						<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home.driver</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	
+			<dependency>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
+		</dependency>
 	</dependencies>
 
 </project>

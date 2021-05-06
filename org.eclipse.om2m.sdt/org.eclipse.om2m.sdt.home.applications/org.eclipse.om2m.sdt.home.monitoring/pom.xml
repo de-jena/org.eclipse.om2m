@@ -13,7 +13,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<artifactId>org.eclipse.om2m.sdt.home.monitoring</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	<!--name>org.eclipse.om2m.sdt.home.monitoring</name-->
 
 	<parent>
@@ -21,27 +21,61 @@
 		<artifactId>org.eclipse.om2m.sdt.home.applications</artifactId>
 		<version>1.1.0-SNAPSHOT</version>
 	</parent>
-	
-	<!-- dependencies>
+
+	<dependencies>
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
-			<artifactId>servlet-api</artifactId>
-			<version>2.2</version>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
 		</dependency>
 
 		<dependency>
-			<groupId>org.eclipse.om2m</groupId>
+			<groupId>${project.groupId}</groupId>
 			<artifactId>org.eclipse.om2m.core.service</artifactId>
-			<version>${mn-cse.version}</version>
+			<version>${project.version}</version>
 		</dependency>
 
 		<dependency>
-			<groupId>org.eclipse.om2m</groupId>
-			<artifactId>org.eclipse.om2m.commons</artifactId>
-			<version>${mn-cse.version}</version>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.interworking.service</artifactId>
+			<version>${project.version}</version>
 		</dependency>
-				
+
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.sdt.home.monitoring.authentication.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.commons</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.http</artifactId>
+			<version>1.2.1</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.component</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.component.annotations</artifactId>
+			<version>1.4.0</version>
+		</dependency>
+
+
 		<dependency>
 			<groupId>commons-codec</groupId>
 			<artifactId>commons-codec</artifactId>
@@ -49,23 +83,11 @@
 		</dependency>
 
 		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>osgi_R4_core</artifactId>
-			<scope>provided</scope>
+			<groupId>com.googlecode.json-simple</groupId>
+			<artifactId>json-simple</artifactId>
+			<version>1.1.1</version>
 		</dependency>
 
-		<dependency>
-			<groupId>org.osgi</groupId>
-			<artifactId>osgi_R4_compendium</artifactId>
-			<scope>provided</scope>
-		</dependency>
-
-		<dependency>
-			<groupId>commons-logging</groupId>
-			<artifactId>commons-logging-api</artifactId>
-			<version>1.1</version>
-		</dependency>
-
-	</dependencies -->
+	</dependencies>
 
 </project>

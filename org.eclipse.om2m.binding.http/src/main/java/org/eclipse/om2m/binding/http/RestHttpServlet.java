@@ -20,7 +20,6 @@
 package org.eclipse.om2m.binding.http;
 
 import java.io.IOException;
-import java.io.PrintWriter;
 import java.math.BigInteger;
 import java.nio.charset.Charset;
 import java.util.ArrayList;

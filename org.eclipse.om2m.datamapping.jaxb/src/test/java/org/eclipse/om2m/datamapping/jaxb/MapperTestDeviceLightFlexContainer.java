@@ -7,7 +7,9 @@
  *******************************************************************************/
 package org.eclipse.om2m.datamapping.jaxb;
 
-import static org.junit.Assert.*;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
 
 import org.eclipse.om2m.commons.constants.MimeMediaType;
 import org.eclipse.om2m.commons.resource.CustomAttribute;

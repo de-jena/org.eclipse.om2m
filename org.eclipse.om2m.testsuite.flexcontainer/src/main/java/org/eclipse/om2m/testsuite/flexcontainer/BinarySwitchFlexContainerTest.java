@@ -7,12 +7,10 @@
  *******************************************************************************/
 package org.eclipse.om2m.testsuite.flexcontainer;
 
-import java.math.BigInteger;
-
 import org.eclipse.om2m.commons.constants.Constants;
 import org.eclipse.om2m.commons.constants.ResponseStatusCode;
 import org.eclipse.om2m.commons.resource.CustomAttribute;
-import org.eclipse.om2m.commons.resource.ResponsePrimitive;  
+import org.eclipse.om2m.commons.resource.ResponsePrimitive;
 import org.eclipse.om2m.commons.resource.flexcontainerspec.BinarySwitchFlexContainer;
 import org.eclipse.om2m.core.service.CseService;
 import org.eclipse.om2m.testsuite.flexcontainer.TestReport.Status;

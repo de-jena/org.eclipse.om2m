@@ -26,7 +26,6 @@ import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
-import org.eclipse.om2m.commons.constants.AccessControl;
 import org.eclipse.om2m.commons.constants.CSEType;
 import org.eclipse.om2m.commons.constants.Constants;
 import org.eclipse.om2m.commons.constants.MimeMediaType;

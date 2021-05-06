@@ -17,7 +17,7 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
   <modelVersion>4.0.0</modelVersion>
   <artifactId>org.eclipse.om2m.ipe.dal</artifactId>
-  <packaging>eclipse-plugin</packaging>
+  <packaging>jar</packaging>
   <name>org.eclipse.om2m :: ipe dal</name>
   <description>org.eclipse.om2m :: ipe dal</description>
   <parent>
@@ -25,4 +25,37 @@
     <artifactId>org.eclipse.om2m</artifactId>
     <version>1.1.0-SNAPSHOT</version>
   </parent>
+	<dependencies>
+		<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.core.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.interworking.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>${project.groupId}</groupId>
+			<artifactId>org.eclipse.om2m.persistence.service</artifactId>
+			<version>${project.version}</version>
+		</dependency>
+				<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.dal</artifactId>
+			<version>1.0.1</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.dal.functions</artifactId>
+			<version>1.0.0</version>
+		</dependency>
+		<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.event</artifactId>
+			<version>1.4.0</version>
+			<scope>provided</scope>
+		</dependency>
+	</dependencies>
 </project>

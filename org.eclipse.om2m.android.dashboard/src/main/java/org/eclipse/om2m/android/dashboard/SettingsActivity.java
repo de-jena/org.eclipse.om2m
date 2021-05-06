@@ -16,8 +16,7 @@ import java.util.Locale;
 
 import org.eclipse.om2m.android.dashboard.tools.SettingsManager;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.content.res.Configuration;
 import android.content.res.Resources;
 import android.os.Bundle;

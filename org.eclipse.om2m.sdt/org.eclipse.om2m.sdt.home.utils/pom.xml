@@ -19,7 +19,7 @@
 	</parent>
 
 	<artifactId>org.eclipse.om2m.sdt.home.utils</artifactId>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 	<name>${project.artifactId}</name>
 	<description>Orange Utility library for SDT Connectors</description>
 					
@@ -38,4 +38,22 @@
 		</plugins>
 	</build>
 
+<dependencies>
+				<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+					<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	
+						<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.core.service</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+</dependencies>
 </project>

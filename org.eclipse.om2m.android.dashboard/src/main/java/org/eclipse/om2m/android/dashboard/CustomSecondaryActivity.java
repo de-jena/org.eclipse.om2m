@@ -12,8 +12,7 @@
  *******************************************************************************/
 package org.eclipse.om2m.android.dashboard;
 
-import org.eclipse.om2m.android.dashboard.R;
-
+import android.R;
 import android.app.Activity;
 import android.content.Intent;
 import android.view.Menu;

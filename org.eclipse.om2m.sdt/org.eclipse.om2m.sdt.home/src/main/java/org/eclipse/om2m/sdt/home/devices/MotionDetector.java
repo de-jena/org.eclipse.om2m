@@ -9,7 +9,6 @@ package org.eclipse.om2m.sdt.home.devices;
 
 import org.eclipse.om2m.sdt.Domain;
 import org.eclipse.om2m.sdt.home.modules.MotionSensor;
-import org.eclipse.om2m.sdt.home.modules.SmokeSensor;
 import org.eclipse.om2m.sdt.home.types.DeviceType;
 
 public class MotionDetector extends GenericSensor {

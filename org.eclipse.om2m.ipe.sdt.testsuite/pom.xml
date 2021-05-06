@@ -22,7 +22,7 @@
 	<artifactId>org.eclipse.om2m.ipe.sdt.testsuite</artifactId>
 	<name>org.eclipse.om2m :: IPE SDT Test Suite</name>
 	<description>SDT IPE Test Suite</description>
-	<packaging>eclipse-plugin</packaging>
+	<packaging>jar</packaging>
 
 	<dependencies>
 		<dependency>
@@ -31,6 +31,44 @@
 			<version>4.4</version>
 			<scope>test</scope>
 		</dependency>
+		
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.commons</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+	<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.core.service</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+			<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>3.1.0</version>
+			<scope>provided</scope>
+		</dependency>
+			<dependency>
+			<groupId>org.osgi</groupId>
+			<artifactId>org.osgi.service.http</artifactId>
+			<version>1.2.1</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.datamapping.service</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.api</artifactId>
+		<version>${project.version}</version>
+	</dependency>
+		<dependency>
+		<groupId>${project.groupId}</groupId>
+		<artifactId>org.eclipse.om2m.sdt.home</artifactId>
+		<version>${project.version}</version>
+	</dependency>
 	</dependencies>
 
 </project>

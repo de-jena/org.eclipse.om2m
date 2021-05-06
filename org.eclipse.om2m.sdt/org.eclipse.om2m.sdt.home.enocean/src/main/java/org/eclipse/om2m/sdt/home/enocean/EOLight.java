@@ -10,7 +10,6 @@ package org.eclipse.om2m.sdt.home.enocean;
 import java.util.List;
 
 import org.eclipse.om2m.sdt.Domain;
-import org.eclipse.om2m.sdt.datapoints.ArrayDataPoint;
 import org.eclipse.om2m.sdt.datapoints.BooleanDataPoint;
 import org.eclipse.om2m.sdt.datapoints.IntegerDataPoint;
 import org.eclipse.om2m.sdt.exceptions.ActionException;

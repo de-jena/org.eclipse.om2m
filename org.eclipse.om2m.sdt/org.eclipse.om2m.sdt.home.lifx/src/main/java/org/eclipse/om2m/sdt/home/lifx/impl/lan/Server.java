@@ -8,10 +8,10 @@
 package org.eclipse.om2m.sdt.home.lifx.impl.lan;
 
 import java.io.IOException;
-import java.net.SocketTimeoutException;
 import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
+import java.net.SocketTimeoutException;
 import java.net.UnknownHostException;
 import java.util.ArrayList;
 import java.util.HashMap;

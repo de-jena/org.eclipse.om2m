@@ -10,12 +10,15 @@ package org.eclipse.om2m.ipe.sample.sdt;
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
 import org.eclipse.om2m.ipe.sample.sdt.controller.LifeCycleManager;
+import org.osgi.annotation.bundle.Header;
 import org.osgi.framework.BundleActivator;
 import org.osgi.framework.BundleContext;
+import org.osgi.framework.Constants;
 
 /**
  *  Manages the starting and stopping of the bundle.
  */
+@Header(name = Constants.BUNDLE_ACTIVATOR, value = "${@class}")
 public class Activator implements BundleActivator {
     /** Logger */
     private static Log logger = LogFactory.getLog(Activator.class);
