@@ -7,8 +7,8 @@
  *******************************************************************************/
 package org.eclipse.om2m.sdt.home.lifx.frame;
 
-import java.net.InetAddress;
 import java.net.NetworkInterface;
+import java.util.Collections;
 
 import org.eclipse.om2m.sdt.home.lifx.impl.lan.frame.LIFXFrameAddress;
 
@@ -18,19 +18,22 @@ public class LIFXFrameAddressTest extends TestCase {
 
 	public void testNewFrame() throws Exception {
 		LIFXFrameAddress frameAddress = new LIFXFrameAddress();
-		NetworkInterface ni = NetworkInterface.getByInetAddress(InetAddress.getLocalHost());
-		if (ni != null) {
-			byte[] pcMacAddress = ni.getHardwareAddress();
 
-			frameAddress.setTarget(pcMacAddress);
-			byte[] frameAddressByte = frameAddress.getBytes();
+		for (NetworkInterface ni : Collections.list(NetworkInterface.getNetworkInterfaces())) {
 
-			assertTrue(frameAddressByte.length == 16);
-			for (int i = 0; i < 6; i++) {
-				assertTrue(frameAddressByte[i] == pcMacAddress[i]);
+			if (ni != null && !ni.isLoopback()) {
+				byte[] pcMacAddress = ni.getHardwareAddress();
+
+				frameAddress.setTarget(pcMacAddress);
+				byte[] frameAddressByte = frameAddress.getBytes();
+
+				assertTrue(frameAddressByte.length == 16);
+				for (int i = 0; i < 6; i++) {
+					assertTrue(frameAddressByte[i] == pcMacAddress[i]);
+				}
+				assertTrue(frameAddressByte[6] == 0);
+				assertTrue(frameAddressByte[7] == 0);
 			}
-			assertTrue(frameAddressByte[6] == 0);
-			assertTrue(frameAddressByte[7] == 0);
 		}
 	}
 }

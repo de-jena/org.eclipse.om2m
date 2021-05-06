@@ -35,26 +35,29 @@
 	<properties>
 		<java.version>1.8</java.version>
 		<maven.version>3.0</maven.version>
+		<maven.compiler.source>1.7</maven.compiler.source>
+		<maven.compiler.target>1.7</maven.compiler.target>
 		<tycho.version>0.22.0</tycho.version>
 		<tycho.test.jvmArgs>-Xmx512m -XX:MaxPermSize=256m</tycho.test.jvmArgs>
 	</properties>
 
-	<distributionManagement>
-		<repository>
-			<id>inhouse</id>
-			<name>inhouse repository</name>
-			<uniqueVersion>true</uniqueVersion>
-			<url>http://maven2.rd.francetelecom.fr/proxy/repository/inhouse</url>
-			<layout>default</layout>
-		</repository>
-		<snapshotRepository>
-			<id>inhouse.snapshot</id>
-			<name>inhouse.snapshot repository</name>
-			<uniqueVersion>false</uniqueVersion>
-			<url>http://maven2.rd.francetelecom.fr/proxy/repository/inhouse.snapshot</url>
-			<layout>default</layout>
-		</snapshotRepository>
-	</distributionManagement>
+
+<!-- 	<distributionManagement> -->
+<!-- 		<repository> -->
+<!-- 			<id>inhouse</id> -->
+<!-- 			<name>inhouse repository</name> -->
+<!-- 			<uniqueVersion>true</uniqueVersion> -->
+<!-- 			<url>http://maven2.rd.francetelecom.fr/proxy/repository/inhouse</url> -->
+<!-- 			<layout>default</layout> -->
+<!-- 		</repository> -->
+<!-- 		<snapshotRepository> -->
+<!-- 			<id>inhouse.snapshot</id> -->
+<!-- 			<name>inhouse.snapshot repository</name> -->
+<!-- 			<uniqueVersion>false</uniqueVersion> -->
+<!-- 			<url>http://maven2.rd.francetelecom.fr/proxy/repository/inhouse.snapshot</url> -->
+<!-- 			<layout>default</layout> -->
+<!-- 		</snapshotRepository> -->
+<!-- 	</distributionManagement> -->
 
 	<build>
 		<plugins>
@@ -171,12 +174,14 @@
 		<module>org.eclipse.om2m.ipe.sample.sdt</module>
 		<module>org.eclipse.om2m.ipe.sdt.testsuite</module>
 		<module>org.eclipse.om2m.sdt.comparator.xml</module>   
-		<module>org.eclipse.om2m.site.asn-cse</module>
-		<module>org.eclipse.om2m.site.in-cse</module>
-		<module>org.eclipse.om2m.site.mn-cse</module>
+<!-- 		<module>org.eclipse.om2m.site.asn-cse</module> -->
+<!-- 		<module>org.eclipse.om2m.site.in-cse</module> -->
+<!-- 		<module>org.eclipse.om2m.site.mn-cse</module> -->
 		<module>org.eclipse.om2m.dal</module>
 		<module>org.eclipse.om2m.dal.driver.sample</module>
 		<module>org.eclipse.om2m.ipe.dal</module>
-		<module>com.orange.om2m.p2.repo</module>
+<!-- 		<module>com.orange.om2m.p2.repo</module> -->
+		<module>org.eclipse.om2m.run</module>
+		<module>org.eclipse.om2m.bom</module>
 	</modules>
 </project>

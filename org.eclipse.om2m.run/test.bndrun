@@ -1,0 +1,4 @@
+-standalone: ../../../org.eclipse.om2m.bom/target/index.xml
+-runee: JavaSE-11
+-runfw: org.apache.felix.framwork
+-runrequires: bnd.identity;id='org.eclipse.om2m.binding.service'
